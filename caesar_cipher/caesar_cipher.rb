@@ -8,6 +8,8 @@ def caesar_cipher(word, shifter)
         new_letter = " "
   #If leter is cap, then downcase, check if suming the shifter pass the 122 charcode mark
   #and convert it to string + upcase
+    # 65 - 90 for A-B
+    # 97 - 122 for a-b
       elsif letter.ord >= 65 && letter.ord <= 90
         letter_value = (letter.downcase.ord + shifter) - 122
         if letter.downcase.ord + shifter > 122
