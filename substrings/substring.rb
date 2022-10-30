@@ -2,17 +2,15 @@ dictionary = ["yo", "no", "si", "tampoco", "como", "que", "casi"]
 
 def substrings(words, dict)
     words_array = words.downcase.split(" ")
-    result = Hash.new
-    words_array.reduce(0) do |count, item|
-        result[item] = 0
+    result = words_array.reduce(Hash.new(0)) do |count, item|
         dict.map do |word| 
             if item.include? word
-                result[item] +=1
-                puts result
+                count[item] += 1
+                count
             end
-         end
         end
+    end
+    puts result
 end
 
-substrings("a proBAR nocilla queno", dictionary)
-
+substrings("quepa yogur proBAR nocilla queno", dictionary)
