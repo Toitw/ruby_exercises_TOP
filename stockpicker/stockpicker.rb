@@ -1,5 +1,4 @@
 def stock_picker(arr)
-    max_pair = []
     new_arr = arr.combination(2).to_a
     result_arr = Hash.new
     new_arr.map! do |pair|
